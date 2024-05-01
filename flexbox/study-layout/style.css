@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: darkgray;
+    min-height: 100vh;
+    display: flex; /*display é a propriedade com o que os nossos itens são organizados / flex e flexbox são a mesma coisa*/
+    flex-direction: column; /*alinha as caixas em linhas ou colunas (columns ou row)*/ 
+    gap: 0px 15px;/* gap é o espaçamento entre os itens, podemos usar o row-gap (espaçamento em linha) e o column-gap (espaçamento em coluna), pode-se usar tbm apenas o gap e definir o valor para cluna e linha, respectivamente */
+    justify-content: center; /*alinhamento do flexcontainer, horizontal/veritical se o flex-direction for horizontal/vertical*/
+    align-items: center; /*alinha os itens em relação à página*/
+    /* flex-wrap: wrap; siginifica a quebra, ao diminuir o tamanho da tela */
+}
+
+.item {
+    width: 100%;
+    height: 70px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 20px;
+    /* centralizando os textos na caixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-basis: 200px; tem o mesmo efeito do width, determina a base do flex */
+    /* flex-grow: 1; dá crescimento para a caixa dos itens, 0 e 1 fazem a (des)ativação */
+}
+/*
+.item1 {
+    flex-grow: 2; aqui a diferença é sentida, ficando maior q os demais
+    flex-shrink: 2; diminui a caixa do item (sem a ativação do flex wrap, 0 e 1 fazem a (des)ativação, acima disso vai aumentando o efeito
+}
+
+.item2 {
+    flex: 1 0 200px; flex-grow / flex-shrink / flex-basis -> shortcut para colocar os outros "flexs" em um só. É útil para definir disposições de header-content-footer
+}
+
+.item3 {
+    
+}
+
